@@ -13,8 +13,7 @@ public class InSearchOfEasyProblem {
         }
         if (j > 0) {
             System.out.println("HARD");
-        }
-        else {
+        } else {
             System.out.println("EASY");
         }  
         sc.close();
