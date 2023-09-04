@@ -11,7 +11,7 @@ public class InSearchOfEasyProblem {
                 j++;  
             }
         }
-        if(j > 0) {
+        if (j > 0) {
             System.out.println("HARD");
         }
         else {
