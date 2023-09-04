@@ -1,6 +1,6 @@
 function solveTheProblem(k, n, w) {
     var totalPrice = 0;
-    for (var i=1; i<=w; i++) {
+    for (var i = 1; i <= w; i++) {
         totalPrice += i * k;
     }
     var needToBorrow = totalPrice - n;
