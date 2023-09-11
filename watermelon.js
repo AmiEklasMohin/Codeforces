@@ -5,6 +5,6 @@ function solveTheProblem(watermelonWeight) {
         return "NO";
     }
 }
-var watermelonWeight = readline();
+var watermelonWeight = parseInt(readline());
 var isPossible = solveTheProblem(watermelonWeight);
 print(isPossible);
