@@ -1,31 +1,28 @@
-function solveTheProblem() {
-    var nm = readline().split(' ').map(x => parseInt(x));
-    var ar = readline().split(' ').map(x => parseInt(x));
-    var n = nm[0];
-    var m = nm[1];
-    var s = [];
-    var text = '';
-    for (var i = 0; i < m; i++) {
-        s[i] = 'B';
+function lexicographicallySmallestString() {
+    var inputLength = readline().split(' ').map(x => parseInt(x));
+    var inputSequence = readline().split(' ').map(x => parseInt(x));
+    var lengthOfSequence = inputLength[0];
+    var lengthOfString = inputLength[1];
+    var smallestString = [];
+    for (var i = 0; i < lengthOfString; i++) {
+        smallestString[i] = 'B';
     }
-    for (var j = 0; j < n; j++) {
-        var k = m - ar[j];
-        var x = ar[j] - 1;
-        if (x <= k && s[x] === 'B') {
-            s[x] = 'A';
-        } else if (s[k] === 'B') {
-            s[k] = 'A';
+    for (var j = 0; j < lengthOfSequence; j++) {
+        var k = lengthOfString - inputSequence[j];
+        var x = inputSequence[j] - 1;
+        if (x <= k && smallestString[x] === 'B') {
+            smallestString[x] = 'A';
+        } else if (smallestString[k] === 'B') {
+            smallestString[k] = 'A';
         } else {
-            s[x] = 'A';
+            smallestString[x] = 'A';
         }
     }
-    for (var xx = 0; xx < m; xx++) {
-        text = text + s[xx];
-    }
-    return text;
+    return smallestString;
 }
-var testCase = parseInt(readline());
+
+var testCase = Number.parseInt(readline());
 for (var i = 1; i <= testCase; i++) {
-    var smallestString = solveTheProblem();
-    print(smallestString);
+    var smallestString = lexicographicallySmallestString();
+    print(smallestString.join(''));
 }
