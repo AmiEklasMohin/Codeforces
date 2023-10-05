@@ -8,10 +8,10 @@ int minimumSumOne(int n, int m, int a, int b) {
 
 int minimumSumTwo(int n, int m, int a, int b) {
     int k = n / m;
+    int p = (n - (k * m)) * a;
+    p = std::min(p, b);
     int minimumRubles = k * b;
-    int x = (n - (k * m)) * a;
-    x = std::min(x, b);
-    minimumRubles += x;
+    minimumRubles += p;
     return minimumRubles;
 }
 
