@@ -1,22 +1,25 @@
 function lexicographicallySmallestString() {
-    var inputLength = readline().split(' ').map(x => parseInt(x));
-    var inputSequence = readline().split(' ').map(x => parseInt(x));
-    var lengthOfSequence = inputLength[0];
-    var lengthOfString = inputLength[1];
-    var smallestString = [];
-    for (var i = 0; i < lengthOfString; i++) {
-        smallestString[i] = 'B';
+    var firstLine = readline().split(' ').map(x => Number.parseInt(x));
+    var secondLine = readline().split(' ').map(x => Number.parseInt(x));
+    var n = firstLine[0], m = firstLine[1];
+    var tempArray = [];
+    var smallestString = "";
+    for (var i = 0; i < m; i++) {
+        tempArray[i] = "B";
     }
-    for (var j = 0; j < lengthOfSequence; j++) {
-        var k = lengthOfString - inputSequence[j];
-        var x = inputSequence[j] - 1;
-        if (x <= k && smallestString[x] === 'B') {
-            smallestString[x] = 'A';
-        } else if (smallestString[k] === 'B') {
-            smallestString[k] = 'A';
+    for (var j = 0; j < n; j++) {
+        var k = m - secondLine[j];
+        var p = secondLine[j] - 1;
+        if (k >= p && tempArray[p] === 'B') {
+            tempArray[p] = "A";
+        } else if (tempArray[k] === 'B') {
+            tempArray[k] = "A";
         } else {
-            smallestString[x] = 'A';
+            tempArray[p] = "A";
         }
+    }
+    for (i = 0; i < tempArray.length; i++) {
+        smallestString = smallestString.concat(tempArray[i]);
     }
     return smallestString;
 }
@@ -24,5 +27,5 @@ function lexicographicallySmallestString() {
 var testCase = Number.parseInt(readline());
 for (var i = 1; i <= testCase; i++) {
     var smallestString = lexicographicallySmallestString();
-    print(smallestString.join(''));
+    print(smallestString);
 }
