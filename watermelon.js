@@ -1,15 +1,9 @@
-function dividedInEqualParts(watermelonWeight) {
-    var isPossible = false;
+function divideInEvenWeight(watermelonWeight) {
     if (watermelonWeight >= 4 && watermelonWeight % 2 === 0) {
-        isPossible = true;
+        print("YES");
+    } else {
+        print("NO");
     }
-    return isPossible;
 }
-
 var watermelonWeight = Number.parseInt(readline());
-var isPossible = dividedInEqualParts(watermelonWeight);
-if (isPossible) {
-    print("YES");
-} else {
-    print("NO");
-}
+divideInEvenWeight(watermelonWeight);
