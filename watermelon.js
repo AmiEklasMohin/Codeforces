@@ -1,10 +1,15 @@
-function solveTheProblem(watermelonWeight) {
+function dividedInEqualParts(watermelonWeight) {
+    var isPossible = false;
     if (watermelonWeight >= 4 && watermelonWeight % 2 === 0) {
-        return "YES";
-    } else {
-        return "NO";
+        isPossible = true;
     }
+    return isPossible;
 }
-var watermelonWeight = parseInt(readline());
-var isPossible = solveTheProblem(watermelonWeight);
-print(isPossible);
+
+var watermelonWeight = Number.parseInt(readline());
+var isPossible = dividedInEqualParts(watermelonWeight);
+if (isPossible) {
+    print("YES");
+} else {
+    print("NO");
+}
