@@ -1,12 +1,14 @@
-function solveTheProblem(inputNumber) {
-    if (inputNumber % 2 === 0) {
-        result = Number.parseInt(inputNumber / 2);
+function calculateOutput(inputNumber) {
+    var outputNumber = 0;
+    if ((inputNumber % 2) === 0) {
+        outputNumber = Number.parseInt(inputNumber / 2);
     } else {
-        result = Number.parseInt((inputNumber / 2) + 1);
-        result *= -1;
+        outputNumber = Number.parseInt((inputNumber / 2) + 1);
+        outputNumber *= -1;
     }
-    return result;
+    return outputNumber;
 }
-var inputNumber = readline();
-var result = solveTheProblem(inputNumber);
-print(result);
+
+var inputNumber = Number.parseInt(readline());
+var outputNumber = calculateOutput(inputNumber);
+print(outputNumber);
