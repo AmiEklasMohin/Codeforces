@@ -1,4 +1,4 @@
-function solveTheProblem(inputWord) {
+function modifiedWord(inputWord) {
     var outputWord = inputWord;
     if (inputWord.length > 10) {
         var wordLength = inputWord.length;
@@ -9,9 +9,10 @@ function solveTheProblem(inputWord) {
     }
     return outputWord;
 }
-var testCase = readline();
+
+var testCase = Number.parseInt(readline());
 for (var i = 1; i <= testCase; i++) {
     var inputWord = readline();
-    var outputWord = solveTheProblem(inputWord);
+    var outputWord = modifiedWord(inputWord);
     print(outputWord);
 }
