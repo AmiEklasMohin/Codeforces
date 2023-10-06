@@ -9,7 +9,7 @@ public class AntonAndPolyhedrons {
         polyhedronsList.put("Octahedron", 8);
         polyhedronsList.put("Dodecahedron", 12);
         polyhedronsList.put("Icosahedron", 20);
-
+        
         int numberOfPolyhedrons, totalFaces = 0;
         Scanner scanner = new Scanner(System.in);
         numberOfPolyhedrons = scanner.nextInt();

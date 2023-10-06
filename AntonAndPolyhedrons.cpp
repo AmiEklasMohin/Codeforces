@@ -11,6 +11,7 @@ int main() {
         {"Dodecahedron", 12},
         {"Icosahedron", 20}
     };
+    
     int numberOfPolyhedrons, totalFaces = 0;
     cin >> numberOfPolyhedrons;
     for (int i = 1; i <= numberOfPolyhedrons; i++) {
