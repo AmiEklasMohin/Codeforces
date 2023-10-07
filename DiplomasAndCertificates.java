@@ -2,14 +2,14 @@ import java.util.Scanner;
 
 public class DiplomasAndCertificates {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        long n = sc.nextLong();
-        long k = sc.nextLong();
-        long maxNumberOfWinners = n / 2;
-        long numberOfDiplomas = maxNumberOfWinners / (k + 1);
-        long numberOfCertificates = numberOfDiplomas * k;
-        long numberOfLoosers = n - numberOfDiplomas - numberOfCertificates;
-        System.out.println(numberOfDiplomas + " " + numberOfCertificates + " " + (numberOfLoosers));
-        sc.close();
+        Scanner scanner = new Scanner(System.in);
+        long numberOfStudents = scanner.nextLong();
+        long degreeRatio = scanner.nextLong();
+        long maxNumberOfWinners = numberOfStudents / 2;
+        long numberOfDiplomas = maxNumberOfWinners / (degreeRatio + 1);
+        long numberOfCertificates = numberOfDiplomas * degreeRatio;
+        long numberOfLoosers = numberOfStudents - numberOfDiplomas - numberOfCertificates;
+        System.out.println(numberOfDiplomas + " " + numberOfCertificates + " " + numberOfLoosers);
+        scanner.close();
     }
 }
