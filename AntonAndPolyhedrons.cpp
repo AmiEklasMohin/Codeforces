@@ -13,7 +13,7 @@ int main() {
     };
     int numberOfPolyhedrons, totalFaces = 0;
     cin >> numberOfPolyhedrons;
-    for (int i = 1; i <= numberOfPolyhedrons; i++) {
+    for (int i = 1; i <= numberOfPolyhedrons; i += 1) {
         string nameOfPolyhedron;
         cin >> nameOfPolyhedron;
         totalFaces += polyhedronsList[nameOfPolyhedron];
