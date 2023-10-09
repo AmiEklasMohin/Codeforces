@@ -1,17 +1,23 @@
 import java.util.Scanner;
 
 public class BearAndBigBrother {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner (System.in);
-        int weightOfLimak = sc.nextInt();
-        int weightOfBob = sc.nextInt();
-        int countYears = 0;
+    public static int countYears(int weightOfLimak, int weightOfBob) {
+        int requiredYears = 0;
         while (weightOfLimak <= weightOfBob) {
-            weightOfLimak *= 3;
-            weightOfBob *= 2;
-            countYears++;
+            weightOfLimak = weightOfLimak * 3;
+            weightOfBob = weightOfBob * 2;
+            requiredYears += 1;
         }
-        System.out.println(countYears);
-        sc.close(); 
+        return requiredYears;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int weightOfLimak, weightOfBob, requiredYears;
+        weightOfLimak = scanner.nextInt();
+        weightOfBob = scanner.nextInt();
+        requiredYears = countYears(weightOfLimak, weightOfBob);
+        System.out.println(requiredYears);
+        scanner.close();
     }
 }
