@@ -10,9 +10,7 @@ public:
         for (int i = 1; i <= num_of_problems; ++i) {
             cin >> sure[0] >> sure[1] >> sure[2];
             int x = sure[0] + sure[1] + sure[2];
-            if (x >= 2) {
-                solve_count += 1;
-            }
+            if (x >= 2) solve_count += 1;
         }
         return solve_count;
     }
@@ -30,3 +28,4 @@ int main() {
     cout << problems_implemented << endl;
     return 0;
 }
+
