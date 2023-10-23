@@ -1,17 +1,13 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 class Solution {
 public:
     bool isCoprime (int a, int b) {
-        int temp;
-        while(a != 0) {
-            temp = a;
-            a = b % a;
-            b = temp;
-        }
-        return (b == 1);
+        int gcd = __gcd(a,b);
+        return (gcd == 1);
     }
     vector<int> properFraction (int sum) {
         int numerator = sum / 2;
