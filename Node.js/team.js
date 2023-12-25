@@ -34,3 +34,4 @@ function main() {
     }
     console.log(solveCount);
 }
+
