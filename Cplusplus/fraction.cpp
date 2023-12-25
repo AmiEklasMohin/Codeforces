@@ -5,11 +5,12 @@ using namespace std;
 
 class Solution {
 public:
-    bool isCoprime (int a, int b) {
+    bool isCoprime(int a, int b) {
         int gcd = __gcd(a,b);
         return (gcd == 1);
     }
-    vector<int> properFraction (int sum) {
+
+    vector<int> properFraction(int sum) {
         int numerator = sum / 2;
         int denominator = (sum + 1) / 2;
         vector<int> result;
