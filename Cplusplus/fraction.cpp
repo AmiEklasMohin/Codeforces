@@ -6,7 +6,7 @@ using namespace std;
 class Solution {
 public:
     bool isCoprime(int a, int b) {
-        int gcd = __gcd(a,b);
+        int gcd = __gcd(a, b);
         return (gcd == 1);
     }
 
