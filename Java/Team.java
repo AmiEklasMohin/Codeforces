@@ -3,13 +3,14 @@ import java.util.*;
 public class Team {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int n, a, b, c, solveCount = 0;
-        n = scan.nextInt();
+        int n = scan.nextInt();
+        int solveCount = 0;
         for (int i = 1; i <= n; ++i) {
-            a = scan.nextInt();
-            b = scan.nextInt();
-            c = scan.nextInt();
-            if ((a + b + c) >= 2) {
+            int a = scan.nextInt();
+            int b = scan.nextInt();
+            int c = scan.nextInt();
+            int x = a + b + c;
+            if (x > 1) {
                 solveCount += 1;
             }
         }
