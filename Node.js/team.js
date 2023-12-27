@@ -22,16 +22,14 @@ function readline() {
 }
 
 function main() {
-    var n = Number.parseInt(readline());
-    var solveCount = 0;
-    for (var i = 1; i <= n; ++i) {
-        var x = 0;
-        var num = readline().split(' ').map(x => Number.parseInt(x));
-        x = num[0] + num[1] + num[2];
+    let n = parseInt(readline());
+    let solveCount = 0;
+    for (let i = 1; i <= n; ++i) {
+        let num = readline().split(' ').map(x => parseInt(x));
+        let x = num[0] + num[1] + num[2];
         if (x >= 2) {
             solveCount += 1;
         }
     }
     console.log(solveCount);
 }
-
