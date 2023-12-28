@@ -21,7 +21,7 @@ function readline() {
     return inputString[currentLine++];
 }
 
-function countTotalFaces(numberOfPolyhedrons) {
+function main() {
     const polyhedronList = {
         "Tetrahedron": 4,
         "Cube": 6,
@@ -29,17 +29,11 @@ function countTotalFaces(numberOfPolyhedrons) {
         "Dodecahedron": 12,
         "Icosahedron": 20
     };
-    let nameOfPolyhedron = null;
-    let totalFaceCounter = 0;
-    for (let i = 1; i <= numberOfPolyhedrons; i += 1) {
-        nameOfPolyhedron = readline();
-        totalFaceCounter += polyhedronList[nameOfPolyhedron];
+    let numberOfPolyhedrons = parseInt(readline());
+    let counter = 0;
+    for (let i = 1; i <= numberOfPolyhedrons; ++i) {
+        let nameOfPolyhedron = readline();
+        counter += polyhedronList[nameOfPolyhedron];
     }
-    return totalFaceCounter;
-}
-
-function main() {
-    let numberOfPolyhedrons = Number.parseInt(readline());
-    let totalFaces = countTotalFaces(numberOfPolyhedrons);
-    console.log(totalFaces);
+    console.log(counter);
 }
